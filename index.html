@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" ng-app="listApp">
+<head>
+<title>AngularJS Example</title>
+</head>
+<body ng-controller="ListCtrl">
+
+<ul ng-repeat="task in todoList">
+   <li>
+      {{ task.name }} - {{ task.description }}
+   </li>
+</ul>
+
+<script src="js/angular.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
