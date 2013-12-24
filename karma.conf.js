@@ -16,7 +16,7 @@ module.exports = function(config) {
       'app/lib/angular-scenario.js'
     ],
     frameworks: ['jasmine'],
-    reporters: ['progress'],
+    reporters: ['progress', 'junit'],
     browsers: ['PhantomJS'],
     plugins : [
             'karma-junit-reporter',
@@ -24,9 +24,9 @@ module.exports = function(config) {
             'karma-script-launcher',
             'karma-jasmine'
             ],
-    logLevel: config.LOG_DEBUG,
-    autoWatch: false,
-    singleRun: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    singleRun: false,
     colors: true
   });
 };

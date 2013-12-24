@@ -5,7 +5,12 @@
 </head>
 <body ng-controller="ListCtrl">
 
-<ul ng-repeat="task in todoList">
+Search: <input type="text" ng-model="query" />
+
+<select ng-model="selectedOrderOption" ng-options="orderOption as orderOption.description for orderOption in orderOptions">
+</select>
+
+<ul ng-repeat="task in todoList | filter:query | orderBy:foo">
    <li>
       {{ task.name }} - {{ task.description }}
    </li>
