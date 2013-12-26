@@ -7,10 +7,10 @@
 
 Search: <input type="text" ng-model="query" />
 
-<select ng-model="selectedOrderOption" ng-options="orderOption as orderOption.description for orderOption in orderOptions">
+<select ng-model="selectedOrderOption" ng-options="orderOption.value as orderOption.description for orderOption in orderOptions">
 </select>
 
-<ul ng-repeat="task in todoList | filter:query | orderBy:foo">
+<ul ng-repeat="task in todoList | filter:query | orderBy:selectedOrderOption">
    <li>
       {{ task.name }} - {{ task.description }}
    </li>

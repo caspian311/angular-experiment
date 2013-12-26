@@ -20,5 +20,9 @@ describe('listApp controllers', function() {
          expect(this.scope.orderOptions[1].value).toBe('name');
          expect(this.scope.orderOptions[1].description).toBe('Alphabetical');
       });
+
+      it('should initially order by age', function() {
+         expect(this.scope.selectedOrderOption).toBe('age');
+      });
    });
 });
