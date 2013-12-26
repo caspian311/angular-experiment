@@ -19,11 +19,6 @@ listApp.controller('ListCtrl', function($scope) {
       }
    ];
 
-
-   $scope.foo = function() {
-      return $scope.selectedOrderOption.value;
-   }
-
    $scope.orderOptions = [
       {
          value: 'age',
@@ -34,6 +29,6 @@ listApp.controller('ListCtrl', function($scope) {
          description: 'Alphabetical'
       }
    ];
-   $scope.selectedOrderOption = $scope.orderOptions[0].value;
 
+   $scope.selectedOrderOption = $scope.orderOptions[0].value;
 });
