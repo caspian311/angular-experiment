@@ -2,7 +2,9 @@
    var controllers = angular.module('listAppControllers', []);
 
    controllers.controller('ListCtrl', ['$scope', 'ListService', function($scope, listService) {
-      $scope.todoList = listService.all();
+      listService.all(function(list) {
+         $scope.todoList = list;
+      })
 
       $scope.orderOptions = [
          {
